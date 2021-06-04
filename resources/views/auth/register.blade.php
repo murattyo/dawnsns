@@ -6,19 +6,19 @@
 
 <h2>新規ユーザー登録</h2>
 
-{{ Form::label('ユーザー名') }}
-{{ Form::text('username',null,['class' => 'input']) }}
+{{ Form::label('UserName') }}
+{{ Form::text('username',null,['class' => 'input', 'required', 'placeholder' => 'dawntown']) }}
 
-{{ Form::label('メールアドレス') }}
-{{ Form::text('mail',null,['class' => 'input']) }}
+{{ Form::label('MailAdress') }}
+{{ Form::email('mail',null,['class' => 'input', 'required', 'placeholder' => 'dawn@dawn.jp']) }}
 
-{{ Form::label('パスワード') }}
-{{ Form::text('password',null,['class' => 'input']) }}
+{{ Form::label('Password') }}
+{{ Form::password('password',null,['class' => 'input', 'required']) }}
 
-{{ Form::label('パスワード確認') }}
-{{ Form::text('password-confirm',null,['class' => 'input']) }}
+{{ Form::label('Password_confirm') }}
+{{ Form::password('password-confirm',null,['class' => 'input', 'required']) }}
 
-{{ Form::submit('登録') }}
+{{ Form::submit('REGISTER') }}
 
 <p><a href="/login">ログイン画面へ戻る</a></p>
 

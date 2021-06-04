@@ -80,12 +80,15 @@ class RegisterController extends Controller
             $data = $request->input();
 
             $this->create($data);
-            return redirect('added');
+
+            return view('auth.added',compact('data'));
         }
         return view('auth.register');
     }
 
     public function added(){
+        //$username = $request->input('username');
+
         return view('auth.added');
     }
 }
